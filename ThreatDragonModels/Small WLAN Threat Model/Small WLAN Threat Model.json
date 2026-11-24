@@ -1,0 +1,18 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "",
+  "summary": {
+    "title": "Small WLAN Threat Model",
+    "owner": "Ayisi Samuel",
+    "description": "Threat modelling of a small wireless LAN consisting of a wireless access point, connected client devices and an internet connection.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
