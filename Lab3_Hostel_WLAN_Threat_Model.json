@@ -1,0 +1,2121 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Lab 3 - Threat Model of the GOSAJEC LTD Hostel WLAN",
+    "owner": "Ayisi Samuel Ameyaw",
+    "description": "STRIDE threat model of a student hostel WLAN (open SSID with captive-portal login, Starlink uplink, Ruijie switch and 8 APs). Course CY 475.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Ayisi Samuel Ameyaw"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Level 0 - Context",
+        "diagramType": "STRIDE",
+        "placeholder": "Context diagram",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [
+          {
+            "position": {
+              "x": 400,
+              "y": 70
+            },
+            "size": {
+              "width": 300,
+              "height": 420
+            },
+            "attrs": {
+              "text": {
+                "text": "Hostel network (managed)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 2.0,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": 1,
+            "id": "16daabd2-8670-4664-842f-868ca67d54bd",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Hostel network (managed)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 460,
+              "y": 190
+            },
+            "size": {
+              "width": 180,
+              "height": 180
+            },
+            "attrs": {
+              "text": {
+                "text": "P0 Hostel WLAN Service"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "5cba13c4-8dce-4cf0-8792-7727b8fcf480",
+            "data": {
+              "type": "tm.Process",
+              "name": "P0 Hostel WLAN Service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "position": {
+              "x": 20,
+              "y": 80
+            },
+            "size": {
+              "width": 190,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E1 Resident Student"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 3,
+            "id": "a67ef877-cde9-4323-8138-65091384b5f5",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E1 Resident Student",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "position": {
+              "x": 20,
+              "y": 260
+            },
+            "size": {
+              "width": 190,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E2 Non-resident User"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 4,
+            "id": "9578ad7f-8408-49c3-82f5-d652769a100f",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E2 Non-resident User",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "position": {
+              "x": 20,
+              "y": 440
+            },
+            "size": {
+              "width": 190,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E3 Attacker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 5,
+            "id": "75ac1b31-ebb5-4bf3-afba-8ad47723a9f5",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E3 Attacker",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "position": {
+              "x": 890,
+              "y": 260
+            },
+            "size": {
+              "width": 190,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E5 Internet (Starlink)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 6,
+            "id": "bcb03a47-c014-4552-aa76-6eaf847b0ddb",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E5 Internet (Starlink)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "position": {
+              "x": 455,
+              "y": 530
+            },
+            "size": {
+              "width": 190,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E4 Network Administrator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 7,
+            "id": "067c8ad3-7cf4-416f-a2e6-8ee6209ed988",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E4 Network Administrator",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 8,
+            "id": "8dbcfb45-e0c6-4267-83df-b610101195a4",
+            "source": {
+              "cell": "a67ef877-cde9-4323-8138-65091384b5f5"
+            },
+            "target": {
+              "cell": "5cba13c4-8dce-4cf0-8792-7727b8fcf480"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Wi-Fi and login"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Wi-Fi and login",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 9,
+            "id": "1417ff3b-2d3c-4571-8e87-7623ab023c65",
+            "source": {
+              "cell": "9578ad7f-8408-49c3-82f5-d652769a100f"
+            },
+            "target": {
+              "cell": "5cba13c4-8dce-4cf0-8792-7727b8fcf480"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Shared credentials"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Shared credentials",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "id": "71bde1c8-3a7c-4768-969a-7626c4fdc2d4",
+            "source": {
+              "cell": "75ac1b31-ebb5-4bf3-afba-8ad47723a9f5"
+            },
+            "target": {
+              "cell": "5cba13c4-8dce-4cf0-8792-7727b8fcf480"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Attacks"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Attacks",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 11,
+            "id": "d5a245aa-6dca-48db-9dd4-450a769a8abc",
+            "source": {
+              "cell": "067c8ad3-7cf4-416f-a2e6-8ee6209ed988"
+            },
+            "target": {
+              "cell": "5cba13c4-8dce-4cf0-8792-7727b8fcf480"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Administration"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Administration",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 12,
+            "id": "28e8f88b-d5ac-4253-83ef-f9ca7adb6cca",
+            "source": {
+              "cell": "5cba13c4-8dce-4cf0-8792-7727b8fcf480"
+            },
+            "target": {
+              "cell": "bcb03a47-c014-4552-aa76-6eaf847b0ddb"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "Internet traffic"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "Internet traffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "isTrustBoundary": false
+            }
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Level 1 - Hostel WLAN DFD",
+        "diagramType": "STRIDE",
+        "placeholder": "Level 1 data flow diagram",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [
+          {
+            "position": {
+              "x": 20,
+              "y": 40
+            },
+            "size": {
+              "width": 260,
+              "height": 690
+            },
+            "attrs": {
+              "text": {
+                "text": "TB1: Wireless medium / client zone (untrusted)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 2.0,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": 1,
+            "id": "db2e3309-17de-4cac-be1b-cfd964ad8070",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB1: Wireless medium / client zone (untrusted)",
+              "description": "Radio space where students, visitors and attackers can all transmit and listen.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 340,
+              "y": 40
+            },
+            "size": {
+              "width": 880,
+              "height": 690
+            },
+            "attrs": {
+              "text": {
+                "text": "TB2: Hostel network (managed infrastructure)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 2.0,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": 2,
+            "id": "f8b2f67d-c6ee-4ca5-9f98-33e446d18171",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB2: Hostel network (managed infrastructure)",
+              "description": "APs, switch, portal, management plane and data stores operated by GOSAJEC LTD.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1280,
+              "y": 40
+            },
+            "size": {
+              "width": 200,
+              "height": 690
+            },
+            "attrs": {
+              "text": {
+                "text": "TB3: Internet edge"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 2.0,
+                "strokeDasharray": "4 3"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": 3,
+            "id": "5911a502-4681-41a0-aa41-7691aa9715b1",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB3: Internet edge",
+              "description": "Boundary between the hostel network and the public Internet via Starlink.",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 60,
+              "y": 110
+            },
+            "size": {
+              "width": 180,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "E1 Resident Student"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 4,
+            "id": "c4d4889b-2226-4511-a5d1-28ad1e082234",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E1 Resident Student",
+              "description": "Registered student using a laptop or phone (maximum two devices per account).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 60,
+              "y": 330
+            },
+            "size": {
+              "width": 180,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "E2 Non-resident User"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 5,
+            "id": "801b20c8-aa54-4b5b-87d2-fa8a7a45b3ad",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E2 Non-resident User",
+              "description": "Friend or visitor who gains access only through shared credentials or a resident's hotspot.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 60,
+              "y": 560
+            },
+            "size": {
+              "width": 180,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "E3 Attacker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 6,
+            "id": "f8827e8c-746e-415f-8b61-6c24f0c04ff3",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E3 Attacker",
+              "description": "Malicious resident or external person within radio range of the hostel.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 385,
+              "y": 300
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "P1 Ruijie Access Points (8)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 7,
+            "id": "c2b43fce-876b-4172-aae3-3918776a8229",
+            "data": {
+              "type": "tm.Process",
+              "name": "P1 Ruijie Access Points (8)",
+              "description": "Eight Ruijie APs (4 per block) broadcasting the GOSAJEC LTD SSID, associating clients and forwarding frames.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "bdf93078-f2fe-458b-8a96-370fb8eec777",
+                  "title": "Evil twin / rogue AP impersonating GOSAJEC LTD",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker broadcasts the same SSID with a stronger signal so devices auto-join it, then relays or alters traffic and shows a fake login page. Enabling weakness: Open SSID with no AP authentication or server certificate; devices reconnect to any network with a known name.",
+                  "mitigation": "Use 802.1X with server-certificate validation (EAP-PEAP/TTLS or EAP-TLS) so clients can verify the network; enable Ruijie rogue-AP/WIDS detection; run periodic RF walk-throughs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "16"
+                },
+                {
+                  "id": "d5ac1388-f859-4382-89b5-7adc3ed0f8c2",
+                  "title": "ARP spoofing and man-in-the-middle between students",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "A malicious resident poisons ARP caches on the shared subnet to intercept or modify other students' traffic, or scans and attacks neighbouring devices. Enabling weakness: No client (peer-to-peer) isolation on the APs and no dynamic ARP inspection; students share one broadcast domain (A3, A4).",
+                  "mitigation": "Enable AP client isolation; turn on DHCP snooping, DAI and IP source guard on the Ruijie switch; place each block or floor in its own VLAN; rely on HTTPS end to end.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "16"
+                },
+                {
+                  "id": "2963e8e3-71e8-4fc8-b5d1-b17684454ccc",
+                  "title": "Capture and cracking of hidden WPA2/WPA3 SSID handshakes",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Hidden SSIDs seen in the scan are revealed by standard tools, then a captured WPA2 handshake is cracked offline if the passphrase is weak. Enabling weakness: Hiding an SSID gives no real protection; WPA2/WPA3 transition mode permits WPA2 downgrade; passphrase strength unknown (A9).",
+                  "mitigation": "Remove unused SSIDs; for any remaining PSK network use a random passphrase of 16 or more characters or WPA3-SAE only; put staff or management SSIDs on a separate VLAN.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "8"
+                }
+              ],
+              "isTrustBoundary": false,
+              "privilegeLevel": "",
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "isEncrypted": false,
+              "implementsAuthenticationScheme": false,
+              "implementsCommunicationProtocol": true,
+              "implementsNonce": false,
+              "isALog": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 695,
+              "y": 85
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "P2 Captive Portal and Authentication"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 8,
+            "id": "0858cabb-9327-41cf-b9ac-ebb626cf454b",
+            "data": {
+              "type": "tm.Process",
+              "name": "P2 Captive Portal and Authentication",
+              "description": "Web login that checks each student's credentials and applies the two-device limit (assumed A1).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0b9a7ae8-ef97-42f3-88d4-5ec09f982bad",
+                  "title": "Captive portal phishing and cloned login page",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Behind a rogue AP or through DNS manipulation, the attacker serves a copy of the hostel login portal and harvests usernames (Gmail addresses) and passwords. Enabling weakness: Users are conditioned to type credentials into a web page after joining; no mutual authentication between portal and user (A1, A2).",
+                  "mitigation": "Serve the portal only over HTTPS with a CA-signed certificate on a fixed, published domain; enable HSTS; teach students to check the address; move to 802.1X so no password is typed into a web page.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "12"
+                },
+                {
+                  "id": "5f8e6bfd-9cd7-4b93-bc81-a468452fffe0",
+                  "title": "Weak, default or reused student passwords; brute force on the portal",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "An attacker guesses passwords for accounts created with predictable initial passwords, or replays leaked Gmail passwords (credential stuffing) at the portal. Enabling weakness: Accounts are provisioned by the operator; no evidence of forced password change, complexity rules, lockout or MFA (A10).",
+                  "mitigation": "Force a password change at first login; set minimum length and complexity; throttle and lock out repeated failures; screen against breached-password lists; advise students never to reuse their Gmail password.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "12"
+                }
+              ],
+              "isTrustBoundary": false,
+              "privilegeLevel": "",
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "isEncrypted": false,
+              "implementsAuthenticationScheme": true,
+              "implementsCommunicationProtocol": false,
+              "implementsNonce": false,
+              "isALog": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 695,
+              "y": 300
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "P3 Ruijie Switch / Gateway"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 9,
+            "id": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf",
+            "data": {
+              "type": "tm.Process",
+              "name": "P3 Ruijie Switch / Gateway",
+              "description": "Ruijie switch (and gateway functions) providing DHCP, DNS, NAT, routing and the Starlink uplink.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "88fdb9d0-b763-4a80-87e4-dde74f2d6e4b",
+                  "title": "DNS spoofing and redirection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Forged DNS replies send students to malicious sites or a fake portal. Enabling weakness: Plain-text, unauthenticated DNS; clients can use any resolver; no DNSSEC validation (A5).",
+                  "mitigation": "Force clients to use the gateway resolver, with DNS-over-TLS upstream and DNSSEC validation; block outbound DNS to other resolvers; combine with DAI.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "9"
+                },
+                {
+                  "id": "710e25a7-564a-4090-a5fa-e13e169e64eb",
+                  "title": "Physical tampering, theft or unauthorised wired access",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Someone unplugs, resets or steals an AP or the switch, or plugs a laptop into an exposed Ethernet port to bypass the portal. Enabling weakness: Equipment in shared hostel areas; unused ports not disabled; no port security (A8).",
+                  "mitigation": "Mount APs out of reach; lock the switch and Starlink router in a ventilated cabinet; disable unused ports, enable port security, apply tamper seals and keep an asset register.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8"
+                },
+                {
+                  "id": "7856349b-2454-499e-be94-c7141dc06cf2",
+                  "title": "Exploitation of unpatched firmware",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "A known vulnerability in outdated AP, switch or gateway firmware is exploited to take control of a device or pivot into the management network. Enabling weakness: No documented patch management for the Ruijie devices; firmware versions unknown (A7).",
+                  "mitigation": "Keep a firmware inventory; apply vendor updates after testing; subscribe to Ruijie security advisories; schedule quarterly reviews.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "12"
+                }
+              ],
+              "isTrustBoundary": false,
+              "privilegeLevel": "",
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "isEncrypted": false,
+              "implementsAuthenticationScheme": false,
+              "implementsCommunicationProtocol": true,
+              "implementsNonce": false,
+              "isALog": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 695,
+              "y": 535
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "P4 Management Interface"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 10,
+            "id": "6d8fb459-cc30-43a2-b940-c989daf12d37",
+            "data": {
+              "type": "tm.Process",
+              "name": "P4 Management Interface",
+              "description": "Local web interface or cloud console used to configure the switch, gateway and APs.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "a127c6ec-d9a3-46fd-8b5d-30067eea108c",
+                  "title": "Default or weak administrator credentials",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker or curious student logs into the AP, switch or gateway admin page with vendor-default or guessed credentials and reconfigures the network. Enabling weakness: Default or shared admin passwords; management pages reachable from the student network (A6, A7).",
+                  "mitigation": "Change all default credentials; use unique, long passphrases kept in a password manager; create separate named admin accounts; enable lockout; restrict management to a management VLAN.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "15"
+                }
+              ],
+              "isTrustBoundary": false,
+              "privilegeLevel": "",
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "isEncrypted": false,
+              "implementsAuthenticationScheme": true,
+              "implementsCommunicationProtocol": false,
+              "implementsNonce": false,
+              "isALog": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 370,
+              "y": 565
+            },
+            "size": {
+              "width": 160,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E4 Network Administrator"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 11,
+            "id": "a3519ec8-c2f0-478b-af55-57b38e908ad1",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E4 Network Administrator",
+              "description": "Person who creates student accounts and manages the equipment.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 990,
+              "y": 85
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "D1 Student Account Database"
+              },
+              "topLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 12,
+            "id": "59f67578-9799-4517-b958-ad30329b7630",
+            "data": {
+              "type": "tm.Store",
+              "name": "D1 Student Account Database",
+              "description": "Usernames (Gmail addresses), passwords and account status.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "9c84a367-97fc-4da0-ba2b-d0eb2317f41a",
+                  "title": "Breach of the student account database",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Theft or leak of the account store exposes student Gmail addresses and password data, enabling credential stuffing against other services. Enabling weakness: Storage protection (hashing, encryption) unknown; broad admin access; backups possibly unprotected (A10).",
+                  "mitigation": "Store passwords salted and hashed (bcrypt or Argon2); encrypt the database and backups; limit access; collect minimum data and comply with the Data Protection Act, 2012 (Act 843).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "8"
+                }
+              ],
+              "isTrustBoundary": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": true,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 990,
+              "y": 190
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "D2 Session and Device Table"
+              },
+              "topLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 13,
+            "id": "8e011eaa-4ee2-4f1c-9386-8289795ab2d1",
+            "data": {
+              "type": "tm.Store",
+              "name": "D2 Session and Device Table",
+              "description": "Active sessions, MAC/IP bindings and the per-account device count.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "573da352-561a-4f71-a6cf-0273ecff512e",
+                  "title": "Bypass of the two-device limit",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "A student changes or randomises MAC addresses, or places a router/hotspot behind one device, to connect more than two devices per account. Enabling weakness: The device count is presumably tracked by MAC address, which is easily changed or randomised (A5).",
+                  "mitigation": "Enforce the limit on authenticated sessions per account rather than MAC address; adopt 802.1X identities; alert when many MACs appear for one account.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8"
+                }
+              ],
+              "isTrustBoundary": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 990,
+              "y": 570
+            },
+            "size": {
+              "width": 200,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "D3 Configuration and Logs"
+              },
+              "topLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 14,
+            "id": "578f8d49-79ee-4fa0-9ed9-09b94ecdceb4",
+            "data": {
+              "type": "tm.Store",
+              "name": "D3 Configuration and Logs",
+              "description": "Device configurations, administrator credentials, backups and event logs.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "15a425ac-7cb6-499d-9a78-4ee891ac360d",
+                  "title": "Tampering with logs and exposure of configuration backups",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An intruder deletes or edits logs to hide activity, or reads exported configuration backups that contain passwords and keys. Enabling weakness: Logs stored only on the device; configuration backups possibly unencrypted (A8).",
+                  "mitigation": "Send logs to a remote server the devices cannot modify; encrypt and access-control configuration backups; monitor file integrity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "8"
+                }
+              ],
+              "isTrustBoundary": false,
+              "isALog": true,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": true,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 1295,
+              "y": 330
+            },
+            "size": {
+              "width": 170,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "E5 Internet (Starlink)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 15,
+            "id": "610e1de6-e634-47db-b19f-14cf35c67c8b",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E5 Internet (Starlink)",
+              "description": "External networks and services reached through the Starlink terminal.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false,
+              "providesAuthentication": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 16,
+            "id": "4379e933-81cc-4377-88a3-f8ba92a0c58f",
+            "source": {
+              "cell": "c4d4889b-2226-4511-a5d1-28ad1e082234"
+            },
+            "target": {
+              "cell": "c2b43fce-876b-4172-aae3-3918776a8229"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F1 Wi-Fi association and data"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F1 Wi-Fi association and data",
+              "description": "Student device joins the open SSID and exchanges all data frames with the AP.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "124aab87-d3a7-4976-97a8-a47482c7b949",
+                  "title": "Passive sniffing of unencrypted Wi-Fi traffic",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "A resident or visitor in radio range captures frames from the open SSID with a monitor-mode adapter and reads unencrypted traffic (HTTP pages, DNS queries, cookies, app metadata). Enabling weakness: SSID is advertised as open ([NONE]/[OPEN]); there is no 802.11 encryption, so every frame is readable over the air.",
+                  "mitigation": "Replace the open SSID with WPA2/WPA3-Enterprise (802.1X) using the existing student accounts via RADIUS; as an interim step enable Wi-Fi Enhanced Open (OWE). Enforce HTTPS and advise a VPN on public networks.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "20"
+                },
+                {
+                  "id": "fcea76e5-c4db-40b5-ada8-d950a8e2db05",
+                  "title": "RF interference and co-channel congestion",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Several APs and neighbouring networks share 2.4 GHz channel 1, causing contention and drops, whether accidental or deliberate jamming. Enabling weakness: Overlapping 2.4 GHz channel plan (two GOSAJEC LTD BSSIDs observed on channel 1) and unavoidable neighbouring networks.",
+                  "mitigation": "Plan channels (1, 6, 11 on 2.4 GHz), lower transmit power, steer capable clients to 5 GHz, use Ruijie auto-RF tuning and repeat site surveys.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "4"
+                }
+              ],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "IEEE 802.11 (open)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 17,
+            "id": "570c4ae4-f5ae-4932-a081-99b4be37976f",
+            "source": {
+              "cell": "c4d4889b-2226-4511-a5d1-28ad1e082234"
+            },
+            "target": {
+              "cell": "0858cabb-9327-41cf-b9ac-ebb626cf454b"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F2 Portal login"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F2 Portal login",
+              "description": "Username and password submitted to the captive portal through the AP.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "b4294cc1-1246-40cb-b0a3-9e0bdfa76571",
+                  "title": "Credentials intercepted on the way to the portal",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "If the login form or redirect uses HTTP, or students click through certificate warnings, credentials cross the open air interface in readable form. Enabling weakness: Unencrypted wireless medium plus a possible HTTP portal or invalid certificate (A2, to be verified).",
+                  "mitigation": "Make the portal HTTPS-only (TLS 1.2 or higher) with a valid certificate, disable the HTTP login page, and never put credentials in URLs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "12"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "HTTP/HTTPS (to verify, A2)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 18,
+            "id": "c14afec2-d705-4979-9cd0-34904cc1107d",
+            "source": {
+              "cell": "801b20c8-aa54-4b5b-87d2-fa8a7a45b3ad"
+            },
+            "target": {
+              "cell": "c2b43fce-876b-4172-aae3-3918776a8229"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F3 Shared-credential access"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F3 Shared-credential access",
+              "description": "Non-resident connects using a resident's credentials or hotspot.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "6744f2aa-8838-4130-ba2a-90e4fd3a9c26",
+                  "title": "Credential sharing and hotspot relaying to non-residents",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "A resident gives a friend their login or tethers a hotspot, so unauthorised people use the bandwidth and their actions are attributed to the resident. Enabling weakness: Knowledge-only authentication; the two-device limit does not stop sharing within the limit or tethering.",
+                  "mitigation": "Publish an acceptable-use policy with sanctions; alert on simultaneous logins from different APs or blocks; offer time-limited visitor vouchers on a rate-limited guest SSID to remove the incentive to share.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "15"
+                }
+              ],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "IEEE 802.11 (open)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 19,
+            "id": "a199f878-d6fc-4a4c-b4b0-2f5ed1ef88bb",
+            "source": {
+              "cell": "f8827e8c-746e-415f-8b61-6c24f0c04ff3"
+            },
+            "target": {
+              "cell": "c2b43fce-876b-4172-aae3-3918776a8229"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F4 Rogue AP / deauth / sniffing"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F4 Rogue AP / deauth / sniffing",
+              "description": "Attacker traffic towards the wireless medium: rogue beacons, deauthentication frames, sniffing.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "76c4d1ef-f88d-4db0-abcb-2d481b27c49d",
+                  "title": "Deauthentication / disassociation flooding",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker sends spoofed deauthentication frames to disconnect students, disrupt study sessions or push devices onto a rogue AP. Enabling weakness: Management frames are unprotected; 802.11w (PMF) cannot be enforced on an open network.",
+                  "mitigation": "Require 802.11w (PMF), available with WPA3, OWE and WPA2/3-Enterprise; enable WIDS alerts for deauthentication floods.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "12"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "IEEE 802.11 (open)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 20,
+            "id": "54fb2c48-1b28-4939-9f4b-0bfebb6832cb",
+            "source": {
+              "cell": "c2b43fce-876b-4172-aae3-3918776a8229"
+            },
+            "target": {
+              "cell": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F5 Wired trunk (Ethernet/PoE)"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F5 Wired trunk (Ethernet/PoE)",
+              "description": "Student traffic carried from the APs to the Ruijie switch.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "352a00c2-2005-4584-afe8-d01fff699a44",
+                  "title": "Rogue DHCP server or DHCP starvation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "A device on the LAN answers DHCP requests with a malicious gateway or DNS, or exhausts the address pool so new clients cannot connect. Enabling weakness: DHCP snooping and rate limiting not enabled; flat Layer 2 network (A4, A5).",
+                  "mitigation": "Enable DHCP snooping with only the uplink port trusted; rate-limit DHCP; use port security and storm control.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "8"
+                }
+              ],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Ethernet",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 21,
+            "id": "ed11b0b2-ade3-4827-8b85-fbe35f03f175",
+            "source": {
+              "cell": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf"
+            },
+            "target": {
+              "cell": "0858cabb-9327-41cf-b9ac-ebb626cf454b"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F6 Redirect and auth check"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F6 Redirect and auth check",
+              "description": "Unauthenticated clients are redirected to the portal; authentication result returned to the gateway.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTP redirect / auth",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "id": "3f5123b5-e72f-433b-b546-d85846ca6a64",
+            "source": {
+              "cell": "0858cabb-9327-41cf-b9ac-ebb626cf454b"
+            },
+            "target": {
+              "cell": "59f67578-9799-4517-b958-ad30329b7630"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F7 Account lookup"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F7 Account lookup",
+              "description": "Credential verification against the stored student accounts.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "83a4ee6e-7e62-49d5-b612-bf622eaea057",
+                  "title": "Insider misuse of account administration",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "A staff member creates, alters or shares accounts without authorisation, or accounts of departed students stay active and are resold. Enabling weakness: No role separation or audit of account creation; no account lifecycle management.",
+                  "mitigation": "Use role-based administration; log account creation and changes; audit accounts each semester and disable them at the end of residence.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "6"
+                }
+              ],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Database query",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 23,
+            "id": "dbf8ba32-671f-4a4c-a06c-170f24c9ae48",
+            "source": {
+              "cell": "0858cabb-9327-41cf-b9ac-ebb626cf454b"
+            },
+            "target": {
+              "cell": "8e011eaa-4ee2-4f1c-9386-8289795ab2d1"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F8 Session binding"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F8 Session binding",
+              "description": "Authenticated MAC/IP recorded; device count checked.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "bcc8eaf7-4eb7-464e-9a07-6a479188e32b",
+                  "title": "Session hijacking by cloning an authenticated MAC/IP",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "After a victim logs in, the attacker copies the victim's MAC and IP while the victim is idle and uses the authenticated session without credentials. Enabling weakness: Authenticated clients are whitelisted by MAC/IP; weak session binding and long timeouts (A5).",
+                  "mitigation": "Bind sessions to MAC, IP and port with dynamic ARP inspection and IP source guard; shorten idle timeouts; use client isolation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "9"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Internal",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "id": "06a6a398-13d1-47ba-ab35-6df39fa7b41c",
+            "source": {
+              "cell": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf"
+            },
+            "target": {
+              "cell": "610e1de6-e634-47db-b19f-14cf35c67c8b"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F9 Internet traffic (Starlink)"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F9 Internet traffic (Starlink)",
+              "description": "All student traffic to and from the Internet over the single Starlink link.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "162060c3-f27d-492b-90ea-ade23ae79dd7",
+                  "title": "Bandwidth exhaustion of the shared Starlink link",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Heavy downloads, torrents, 4K streaming or a deliberate flood by a few users saturates the single uplink and degrades service for everyone. Enabling weakness: No per-user rate limiting or fair-usage QoS is evident; satellite capacity is limited and shared (A8).",
+                  "mitigation": "Apply per-user and per-device bandwidth limits and fair-usage QoS; restrict P2P and bulk traffic at peak hours; monitor Starlink usage and set alerts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "15"
+                },
+                {
+                  "id": "ac938e81-9de7-468e-b188-ab628acc59dd",
+                  "title": "Single uplink failure (outage, obstruction, power loss)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Dish obstruction, weather, terminal fault or a power cut takes the whole hostel offline because everything depends on one Starlink connection. Enabling weakness: Single Internet path and single point of failure; failover link and UPS not mentioned (A8).",
+                  "mitigation": "Add a secondary uplink (4G/5G or another ISP) with automatic failover; protect the dish, router and core switch with UPS and surge protection; monitor link health.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "12"
+                }
+              ],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "IP over Starlink",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 25,
+            "id": "ea3ba95f-f8fd-4b79-b9b5-1bfde88aae91",
+            "source": {
+              "cell": "a3519ec8-c2f0-478b-af55-57b38e908ad1"
+            },
+            "target": {
+              "cell": "6d8fb459-cc30-43a2-b940-c989daf12d37"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F10 Admin login"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F10 Admin login",
+              "description": "Administrator authenticates to the management interface.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "7c35e5cf-cba0-4e96-b7c0-b8fb6236d4ae",
+                  "title": "Compromise of the management account or cloud console",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Phishing or password reuse gives an attacker the administrator's login, allowing changes to SSIDs, accounts and policies on all eight APs. Enabling weakness: Single-factor admin authentication; no least-privilege roles; management plane not separated from user traffic (A6).",
+                  "mitigation": "Enable MFA on the management/cloud account; apply least-privilege roles; alert on admin logins; allow management only from a management VLAN or VPN.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "10"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTP/HTTPS/SSH (to verify, A6)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 26,
+            "id": "8c3266b8-9f3b-473c-ad51-a23d60e1c07e",
+            "source": {
+              "cell": "6d8fb459-cc30-43a2-b940-c989daf12d37"
+            },
+            "target": {
+              "cell": "578f8d49-79ee-4fa0-9ed9-09b94ecdceb4"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F11 Read/write config"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F11 Read/write config",
+              "description": "Configuration, credentials and backups read and written.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Internal",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 27,
+            "id": "cda611c1-390b-4f6a-bbc7-8c10aa51250e",
+            "source": {
+              "cell": "6d8fb459-cc30-43a2-b940-c989daf12d37"
+            },
+            "target": {
+              "cell": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F12 Config push"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F12 Config push",
+              "description": "Configuration pushed to the switch, gateway and APs.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "72a4e1f9-4a61-42bc-84d0-4686f3bd2497",
+                  "title": "Insecure management protocols",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Administrator credentials and configuration travel over HTTP, Telnet or SNMPv1/v2c and are sniffed by a student on the same network. Enabling weakness: Legacy management services enabled by default; management traffic not segregated (A6).",
+                  "mitigation": "Disable Telnet, HTTP and SNMPv1/v2c; use SSH, HTTPS and SNMPv3; restrict management with ACLs on a management VLAN.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "12"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Management protocols (A6)",
+              "isTrustBoundary": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 28,
+            "id": "2a33004e-160f-4b29-8dc9-5dc2d39c4ad3",
+            "source": {
+              "cell": "0933031b-d46d-4c7f-9ac6-3ec4e603aadf"
+            },
+            "target": {
+              "cell": "578f8d49-79ee-4fa0-9ed9-09b94ecdceb4"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "label": {
+                    "text": "F13 Event logging"
+                  }
+                }
+              }
+            ],
+            "data": {
+              "type": "tm.Flow",
+              "name": "F13 Event logging",
+              "description": "Gateway and switch write events to the log store.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "53b829eb-2341-4fce-a478-37696398e33e",
+                  "title": "Insufficient logging and loss of accountability",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A student abuses the network (illegal downloads, attacks) and denies it; with shared credentials and no retained logs, the operator cannot show who did what. Enabling weakness: Authentication, session and NAT logs may not be retained or forwarded; clocks may be unsynchronised; accounts are shared (A8).",
+                  "mitigation": "Forward gateway, switch and AP logs to a central syslog server; record login, MAC, IP and timestamps; synchronise time with NTP; set a retention policy aligned with the law.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "12"
+                }
+              ],
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Syslog/internal",
+              "isTrustBoundary": false
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 2,
+    "reviewer": "",
+    "threatTop": 25
+  }
+}
